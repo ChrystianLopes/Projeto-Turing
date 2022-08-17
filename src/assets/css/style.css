@@ -43,6 +43,27 @@ header img {
 #mensagemCripto {
 
     position: absolute;
+    width: 350px;
+    height: 550px;
+    left: 20px;
+    top: 30px;
+    padding: 10px 15px;
+    border-radius: 32px;
+    border: none;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    
+    color: #495057;
+
+}
+
+.text-box {
+
+    position: absolute;
     padding: 10px 10px;
     width: 400px;
     height: 675px;
@@ -52,9 +73,8 @@ header img {
     background: #FFFFFF;
 
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border: 2px bold ;
     border-radius: 32px;
-    color: #495057;
-
 }
 
 #copy {

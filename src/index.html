@@ -25,22 +25,24 @@
 
 		<main>
 			
-			<section class="text-box" >
+			
 
-				<textarea cols="40" rows="35" id="mensagem" class="input-padrao" placeholder="Escreva o texto descriptografado aqui" required autofocus></textarea>
-		
-				<textarea cols="40" rows="35" id="mensagemCripto" class="input-padrao" readonly></textarea>
+			<textarea id="mensagem" class="input-padrao" placeholder="Escreva o texto descriptografado aqui" required autofocus></textarea>
+				
+				<section class="text-box" >
 
-			</section>
+					<textarea id="mensagemCripto" class="input-padrao" readonly></textarea>
+
+				</section>
 
 			<button id="copy" onclick="copy()">Copiar</button>
 
-			<div class="button-box">
+			<section class="button-box">
 
 				<button class="codificador" onclick="criptografar()">Criptografar</button>
-				<button class="decodificador"onclick="descriptografar()">Descriptografar</button>
+				<button class="decodificador"onclick="verificadora()">Descriptografar</button>
 
-			</div>
+			</section>
 			
 		<script>
 						/*"e" = "enter"
@@ -56,7 +58,7 @@
 	
 				
 				var text = entrada.value;
-				var criptoText = text.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
+				var criptoText = text.replace(/[E\e\é\ê]/gi, "enter").replace(/[I\i\í]/gi, "imes").replace(/[A\a\á\â]/gi, "ai").replace(/[O\o\ó\ô]/gi, "ober").replace(/U\u\ú/gi, "ufat");
 				console.log(criptoText);
 
 				saida.innerText = criptoText;
@@ -65,14 +67,28 @@
 			}
 
 			function descriptografar(){
-				
-				var criptoText = entrada.value;
-				var descriptoText = criptoText.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
+
+				var criptoText = entrada.value
+				var descriptoText = criptoText.replace(/enter/gi, "e").replace(/imes/gi, "i").replace(/ai/gi, "a").replace(/ober/gi, "o").replace(/ufat/gi, "u");
 				console.log(descriptoText);
-				
+
 				saida.innerText = descriptoText;
 				entrada.value = "";
-								
+							
+			}
+
+			function verificadora() {
+
+				var criptoText = entrada.value
+				var segredos = ["enter", "imes", "ai", "ober", "ufat"];
+				var verificar = segredos.some(elementoArray => criptoText.includes(elementoArray)); 
+
+				if (verificar) {
+					descriptografar();
+				} else {
+					alert('A mensagem não está criptografada');
+				}
+
 			}
 
 			function copy() {
