@@ -56,7 +56,7 @@
 	
 				
 				var text = entrada.value;
-				var criptoText = text.replace(/i/g, "imes").replace(/a/g, "ai").replace(/e/g, "enter").replace(/o/g, "ober").replace(/u/g, "ufat");
+				var criptoText = text.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
 				console.log(criptoText);
 
 				saida.innerText = criptoText;
@@ -67,7 +67,7 @@
 			function descriptografar(){
 				
 				var criptoText = entrada.value;
-				var descriptoText = criptoText.replace(/imes/g, "i").replace(/ai/g, "a").replace(/enter/g, "e").replace(/ober/g, "o").replace(/ufat/g, "u");
+				var descriptoText = criptoText.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
 				console.log(descriptoText);
 				
 				saida.innerText = descriptoText;
