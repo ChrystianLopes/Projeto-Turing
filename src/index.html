@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Projeto Turing</title>
+
+		<link rel="stylesheet" href="./assets/css/reset.css">
+		<link rel="stylesheet" href="./assets/css/style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik+Maze&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik+Maze&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+	</head>
+
+	<body>
+		
+		<header>
+
+			<img src="./assets/images/Vector.png" alt="logo da alura">
+
+        </header>
+
+		<main>
+			
+			<section class="text-box" >
+
+				<textarea cols="40" rows="35" id="mensagem" class="input-padrao" placeholder="Escreva o texto descriptografado aqui" required autofocus></textarea>
+		
+				<textarea cols="40" rows="35" id="mensagemCripto" class="input-padrao" readonly></textarea>
+
+			</section>
+
+			<button id="copy" onclick="copy()">Copiar</button>
+
+			<div class="button-box">
+
+				<button class="codificador" onclick="criptografar()">Criptografar</button>
+				<button class="decodificador"onclick="descriptografar()">Descriptografar</button>
+
+			</div>
+			
+		<script>
+						/*"e" = "enter"
+						"i" = "imes"
+						"a" = "ai"
+						"o" = "ober"
+						"u" = "ufat"*/
+
+			var entrada = document.querySelector("#mensagem");
+			var saida = document.querySelector("#mensagemCripto");	
+
+			function criptografar(){
+	
+				
+				var text = entrada.value;
+				var criptoText = text.replace(/i/g, "imes").replace(/a/g, "ai").replace(/e/g, "enter").replace(/o/g, "ober").replace(/u/g, "ufat");
+				console.log(criptoText);
+
+				saida.innerText = criptoText;
+				entrada.value = "";
+								
+			}
+
+			function descriptografar(){
+				
+				var criptoText = entrada.value;
+				var descriptoText = criptoText.replace(/imes/g, "i").replace(/ai/g, "a").replace(/enter/g, "e").replace(/ober/g, "o").replace(/ufat/g, "u");
+				console.log(descriptoText);
+				
+				saida.innerText = descriptoText;
+				entrada.value = "";
+								
+			}
+
+			function copy() {
+				let copyText = document.querySelector("#mensagemCripto");
+				copyText.select();
+				document.execCommand("copy");
+			}
+
+			document.querySelector("#copy").addEventListener("click", copy);
+			
+		</script>
+
+
+		</main>
+
+		<footer>
+
+			Coded by: Chrystian Leal Lopes
+
+        </footer>
+	</body>
+</html>

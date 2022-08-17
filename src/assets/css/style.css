@@ -1,0 +1,173 @@
+body {
+
+    background: #F3F5FC;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    transition: 1s;
+
+}
+
+header img {
+
+    position: absolute;
+    left: 84px;
+    right: 37.43%;
+    top: 40px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+#mensagem {
+
+    position: absolute;
+    padding: 10px 10px;
+    width: 680px;
+    height: 288px;
+    left: 240px;
+    top: 168px;
+    border-radius: 32px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    
+    color: #0A3871;
+
+}
+
+#mensagemCripto {
+
+    position: absolute;
+    padding: 10px 10px;
+    width: 400px;
+    height: 675px;
+    left: 1000px;
+    top: 25px;
+    
+    background: #FFFFFF;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    color: #495057;
+
+}
+
+#copy {
+
+    color: #0A3871;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    gap: 8px;
+
+    position: absolute;
+    width: 336px;
+    height: 67px;
+    left: 1040px;
+    top: 640px;
+
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+}
+
+#copy:hover {
+
+    color: #0A3871;
+    font-size: 17px;
+    cursor: pointer;
+
+}
+
+.button-box {
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 240px;
+    top: 640px;
+
+}
+
+.codificador {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #F3F5FC;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 24px;
+    gap: 8px;
+    
+    width: 328px;
+    height: 67px;
+    
+    background: #0A3871;
+    border-radius: 24px;
+
+}
+
+.codificador:hover {
+    
+    font-size: 17px;
+    cursor: pointer;
+
+}
+
+.decodificador {
+
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+    gap: 8px;
+    color: #0A3871;
+    font-size: 20px;
+    font-weight: bold;
+
+    width: 328px;
+    height: 67px;
+
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.decodificador:hover {
+
+    font-size: 17px;
+    cursor: pointer;
+
+}
+
+footer {
+
+    position: absolute;
+    bottom: 5px;
+    color: #0A3871;
+    font-size: 10px;
+
+}
+
