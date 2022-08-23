@@ -1,22 +1,25 @@
 body {
 
-    background: #F3F5FC;
+    background: url(../images/main_bg.jpg);
     font-family: 'Ubuntu', sans-serif;
     font-size: 20px;
     transition: 1s;
 
 }
 
-header img {
+header p {
 
     position: absolute;
-    left: 84px;
-    right: 37.43%;
-    top: 40px;
+    left: 400px;
+    top: 70px;
 
     flex: none;
     order: 0;
     flex-grow: 0;
+
+    color: #F3F5FC;
+    font-size: 35px;
+    font-weight: bold;
 
 }
 
