@@ -147,6 +147,7 @@ header p {
     height: 67px;
     
     background: #0A3871;
+    border: 1px solid #000000;
     border-radius: 24px;
 
 }
@@ -171,7 +172,7 @@ header p {
     width: 328px;
     height: 67px;
 
-    border: 1px solid #0A3871;
+    border: 1px solid #000000;
     border-radius: 24px;
 
     justify-content: center;
